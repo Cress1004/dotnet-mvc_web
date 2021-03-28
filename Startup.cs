@@ -26,6 +26,9 @@ namespace dotnet_mvc_web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            
+            // To enable Razor Runtime Compilation
+            services.AddRazorPages().AddRazorRuntimeCompilation();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,11 +46,6 @@ namespace dotnet_mvc_web
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseStaticFiles(new StaticFileOptions()
-            {
-                FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "MyStaticsFiles")),
-                RequestPath = "/MyStaticFiles"
-            });
 
             app.UseRouting();
 

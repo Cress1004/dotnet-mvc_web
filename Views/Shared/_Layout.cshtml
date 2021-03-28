@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - dotnet_mvc_web</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/jquery/dist/jquery.min.js" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
@@ -46,3 +47,8 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+<script>
+    $(document).ready(function() {
+        alert("Hello World!");
+    });
+</script>
