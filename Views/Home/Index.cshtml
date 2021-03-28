@@ -1,10 +1,67 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    Layout = "_Layout";
 }
 
-<div class="text-center">
-    <img src="~/images/logo.png" class="logo" alt="logo">
-    <h1 class="display-4">Welcome To Book Store Application</h1>
-    <h3>@DateTime.Now</h3>
-    <p>This is home page</a>.</p>
+<section class="jumbotron text-center">
+    <div class="container">
+        <img src="~/images/logo.png" class="logo" alt="logo">
+        <h1 class="display-4">Welcome To Home Page</h1>
+        <h3>@DateTime.Now</h3>
+        <p>
+            <a href="#" class="btn btn-primary my-2">Search Books</a>
+        </p>
+    </div>
+</section>
+<div class="py-5 bg-light">
+    <div class="container">
+        <h3>Top Books</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm" style="width: 18rem;">
+                    <img src="~/images/unnamed.jpg" class="card-img-top" alt="unnamed">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-sm btn-outline-secondary">View Details</a>
+                            </div>
+                            <small class="text-muted">Author name</small>
+                        </div>
+                    </div>
+                </div>
+            </div><div class="col-md-4">
+                <div class="card mb-4 shadow-sm" style="width: 18rem;">
+                    <img src="~/images/unnamed.jpg" class="card-img-top" alt="unnamed">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-sm btn-outline-secondary">View Details</a>
+                            </div>
+                            <small class="text-muted">Author name</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm" style="width: 18rem;">
+                    <img src="~/images/unnamed.jpg" class="card-img-top" alt="unnamed">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-sm btn-outline-secondary">View Details</a>
+                            </div>
+                            <small class="text-muted">Author name</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
 </div>
