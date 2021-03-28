@@ -20,7 +20,7 @@ namespace dotnet_mvc_web.Controllers
         }
         public ViewResult GetAllBooks()
         {
-            var data = _bookRepository.GetAllBooks();
+            //var data = _bookRepository.GetAllBooks();
             return View();
             // return "This is all books";
             // https://localhost:5001/book/getallbook
