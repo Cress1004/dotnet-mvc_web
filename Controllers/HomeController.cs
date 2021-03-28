@@ -23,6 +23,12 @@ namespace dotnet_mvc_web.Controllers
             return View();
         }
 
+        public ViewResult AboutUs() 
+        {
+            return View(); 
+            // View() method is used when action name is equal view name
+        }
+
         public IActionResult Privacy()
         {
             return View();

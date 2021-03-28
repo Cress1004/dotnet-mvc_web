@@ -38,3 +38,5 @@
 /home/cress/dotnet/dotnet-mvc_web/obj/Debug/net5.0/dotnet-mvc_web.pdb
 /home/cress/dotnet/dotnet-mvc_web/obj/Debug/net5.0/dotnet-mvc_web.genruntimeconfig.cache
 /home/cress/dotnet/dotnet-mvc_web/obj/Debug/net5.0/dotnet-mvc_web.csproj.CopyComplete
+/home/cress/dotnet/dotnet-mvc_web/obj/Debug/net5.0/Razor/Views/Home/AboutUs.cshtml.g.cs
+/home/cress/dotnet/dotnet-mvc_web/obj/Debug/net5.0/Razor/Views/Book/GetAllBooks.cshtml.g.cs

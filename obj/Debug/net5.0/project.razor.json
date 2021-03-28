@@ -15603,6 +15603,11 @@
   "RootNamespace": "dotnet_mvc_web",
   "Documents": [
     {
+      "FilePath": "/home/cress/dotnet/dotnet-mvc_web/Views/Book/GetAllBooks.cshtml",
+      "TargetPath": "Views\\Book\\GetAllBooks.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/cress/dotnet/dotnet-mvc_web/Views/_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
@@ -15615,6 +15620,11 @@
     {
       "FilePath": "/home/cress/dotnet/dotnet-mvc_web/Views/Home/Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/cress/dotnet/dotnet-mvc_web/Views/Home/AboutUs.cshtml",
+      "TargetPath": "Views\\Home\\AboutUs.cshtml",
       "FileKind": "mvc"
     },
     {
