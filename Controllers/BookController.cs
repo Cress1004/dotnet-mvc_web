@@ -6,25 +6,35 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using dotnet_mvc_web.Models;
+using dotnet_mvc_web.Repository;
 
 namespace dotnet_mvc_web.Controllers
 {
     public class BookController : Controller
     {
-        public string getAllBooks()
+        private readonly BookRepository _bookRepository = null;
+        
+        public BookController() 
         {
-            return "This is all books";
+            _bookRepository = new BookRepository();
+        }
+        public List<BookModel> GetAllBooks()
+        {
+            return _bookRepository.GetAllBooks();
+            // return "This is all books";
             // https://localhost:5001/book/getallbook
         }
 
-        public string getBook(int id) 
+        public BookModel GetBook(int id) 
         {
-            return $"Book with id={id}";
+            return _bookRepository.GetBookById(id);
+            // return $"Book with id={id}";
             // https://localhost:5001/book/getbook/1
         }
-        public string searchBooks(string bookName, string authorName) 
+        public List<BookModel> SearchBooks(string bookName, string authorName) 
         {
-            return $"Book with name = {bookName} & authorName = {authorName}"
+            return _bookRepository.SearchBooks(bookName, authorName);
+            // return $"Book with name = {bookName} & authorName = {authorName}"
             // https://localhost:5001/book/searchbooks?bookName=cress&authorName=crescentmoon
         }
     }
