@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/cress/dotnet/dotnet-mvc_web/dotnet-mvc_web.csproj": {}
+    "/Users/huydaodang/Thanh's folder/dotnet-mvc_web/dotnet-mvc_web.csproj": {}
   },
   "projects": {
-    "/home/cress/dotnet/dotnet-mvc_web/dotnet-mvc_web.csproj": {
+    "/Users/huydaodang/Thanh's folder/dotnet-mvc_web/dotnet-mvc_web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/cress/dotnet/dotnet-mvc_web/dotnet-mvc_web.csproj",
+        "projectUniqueName": "/Users/huydaodang/Thanh's folder/dotnet-mvc_web/dotnet-mvc_web.csproj",
         "projectName": "dotnet-mvc_web",
-        "projectPath": "/home/cress/dotnet/dotnet-mvc_web/dotnet-mvc_web.csproj",
-        "packagesPath": "/home/cress/.nuget/packages/",
-        "outputPath": "/home/cress/dotnet/dotnet-mvc_web/obj/",
+        "projectPath": "/Users/huydaodang/Thanh's folder/dotnet-mvc_web/dotnet-mvc_web.csproj",
+        "packagesPath": "/Users/huydaodang/.nuget/packages/",
+        "outputPath": "/Users/huydaodang/Thanh's folder/dotnet-mvc_web/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/cress/.nuget/NuGet/NuGet.Config"
+          "/Users/huydaodang/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
         }
       }
     }

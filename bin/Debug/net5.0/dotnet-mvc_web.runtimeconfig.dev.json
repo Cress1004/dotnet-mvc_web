@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "/home/cress/.dotnet/store/|arch|/|tfm|",
-      "/home/cress/.nuget/packages"
+      "/Users/huydaodang/.dotnet/store/|arch|/|tfm|",
+      "/Users/huydaodang/.nuget/packages"
     ]
   }
 }

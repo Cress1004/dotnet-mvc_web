@@ -1,5 +1,5 @@
 {
-  "FilePath": "/home/cress/dotnet/dotnet-mvc_web/dotnet-mvc_web.csproj",
+  "FilePath": "/Users/huydaodang/Thanh's folder/dotnet-mvc_web/dotnet-mvc_web.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -15603,48 +15603,53 @@
   "RootNamespace": "dotnet_mvc_web",
   "Documents": [
     {
-      "FilePath": "/home/cress/dotnet/dotnet-mvc_web/Views/Book/GetAllBooks.cshtml",
-      "TargetPath": "Views\\Book\\GetAllBooks.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/cress/dotnet/dotnet-mvc_web/Views/_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/cress/dotnet/dotnet-mvc_web/Views/Shared/_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/cress/dotnet/dotnet-mvc_web/Views/Home/Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/cress/dotnet/dotnet-mvc_web/Views/Home/AboutUs.cshtml",
-      "TargetPath": "Views\\Home\\AboutUs.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/cress/dotnet/dotnet-mvc_web/Views/Shared/_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/cress/dotnet/dotnet-mvc_web/Views/Home/Index.cshtml",
+      "FilePath": "/Users/huydaodang/Thanh's folder/dotnet-mvc_web/Views/Home/Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/home/cress/dotnet/dotnet-mvc_web/Views/Shared/Error.cshtml",
+      "FilePath": "/Users/huydaodang/Thanh's folder/dotnet-mvc_web/Views/Shared/_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/huydaodang/Thanh's folder/dotnet-mvc_web/Views/Shared/Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/home/cress/dotnet/dotnet-mvc_web/Views/_ViewImports.cshtml",
+      "FilePath": "/Users/huydaodang/Thanh's folder/dotnet-mvc_web/Views/Home/Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/huydaodang/Thanh's folder/dotnet-mvc_web/Views/Shared/_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/huydaodang/Thanh's folder/dotnet-mvc_web/Views/Book/GetAllBooks.cshtml",
+      "TargetPath": "Views\\Book\\GetAllBooks.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/huydaodang/Thanh's folder/dotnet-mvc_web/Views/Home/AboutUs.cshtml",
+      "TargetPath": "Views\\Home\\AboutUs.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/huydaodang/Thanh's folder/dotnet-mvc_web/Views/_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/huydaodang/Thanh's folder/dotnet-mvc_web/Views/_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/huydaodang/Thanh's folder/dotnet-mvc_web/Views/Home/ContactUs.cshtml",
+      "TargetPath": "Views\\Home\\ContactUs.cshtml",
       "FileKind": "mvc"
     }
   ],
