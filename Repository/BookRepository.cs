@@ -26,7 +26,7 @@ namespace dotnet_mvc_web.Repository
         {
             return new List<BookModel>() 
             {
-                new BookModel() {Id = 1, Title = "Cress", Author = "CrescentMoon", Description = "The lunar chronicles chap 3"},
+                new BookModel() {Id = 1, Title = "Cress", Author = "CrescentMoon", Description = "The lunar chronicles chap 3", Category = "The lunar chronicles", Language = "English", TotalPages = 120},
                 new BookModel() {Id = 2, Title = "Scarlet", Author = "Scarling", Description = "The Lunar Chronicles chap 2"},
                 new BookModel() {Id = 2, Title = "Winter", Author = "Winter", Description = "The Lunar Chronicles chap 4"}
             };

@@ -717,3 +717,4 @@
 /Users/huydaodang/Thanh's folder/dotnet-mvc_web/obj/Debug/net5.0/dotnet-mvc_web.genruntimeconfig.cache
 /Users/huydaodang/Thanh's folder/dotnet-mvc_web/obj/Debug/net5.0/Razor/Views/Home/ContactUs.cshtml.g.cs
 /home/cress/dotnet/dotnet-mvc_web/obj/Debug/net5.0/Razor/Views/Home/ContactUs.cshtml.g.cs
+/home/cress/dotnet/dotnet-mvc_web/obj/Debug/net5.0/Razor/Views/Book/GetBook.cshtml.g.cs

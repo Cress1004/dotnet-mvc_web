@@ -1,10 +1,5 @@
-using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using dotnet_mvc_web.Models;
 using dotnet_mvc_web.Repository;
 
@@ -26,9 +21,10 @@ namespace dotnet_mvc_web.Controllers
             // https://localhost:5001/book/getallbook
         }
 
-        public BookModel GetBook(int id) 
+        public ViewResult GetBook(int id) 
         {
-            return _bookRepository.GetBookById(id);
+            var data = _bookRepository.GetBookById(id);
+            return View(data);
             // return $"Book with id={id}";
             // https://localhost:5001/book/getbook/1
         }
