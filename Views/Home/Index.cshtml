@@ -2,6 +2,16 @@
     Layout = "_Layout";
 }
 
+@section breadcrumb {
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Page1</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Index</li>
+        </ol>
+    </nav>
+}
+
 <!-- <section class="jumbotron text-center">
     <div class="container">
         <img src="~/images/logo.png" class="logo" alt="logo">
@@ -65,3 +75,10 @@
     </div>
 
 </div> -->
+@section scripts{
+    <script>
+        $(document).ready(function() {
+            
+        })
+    </script>
+}
