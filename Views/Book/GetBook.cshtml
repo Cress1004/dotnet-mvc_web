@@ -1,9 +1,6 @@
 @* @using dotnet_mvc_web.Models
-@model IEnumerable<BookModel> *@
+    @model IEnumerable<BookModel> *@
 
-@{
-    Layout = "_Layout";
-}
 <div class="container">
     <h3>Book Details</h3>
     <div class="row">
@@ -56,7 +53,7 @@
                     <button class="btn btn-outline-primary">Read now</button>
                 </div>
             </div>
-            
+
             <hr />
 
             <ul class="list-group">
@@ -64,7 +61,30 @@
                 <li class="list-group-item"><span class="font-weight-bold">Total pages: @Model.TotalPages</span>...</li>
                 <li class="list-group-item"><span class="font-weight-bold">Language - @Model.Language</span>...</li>
             </ul>
-            
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="py-5 bg-light">
+        <h3 class="h3">Similar Books</h3>
+        <div class="row">
+            @for (int i = 0; i < 5; i++)
+            {
+                <div class="card mb-4 shadow-sm" style="width: 18rem;">
+                    <img src="~/images/unnamed.jpg" class="card-img-top" alt="unnamed">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-sm btn-outline-secondary">View Details</a>
+                            </div>
+                            <small class="text-muted">Author name</small>
+                        </div>
+                    </div>
+                </div>
+            }
         </div>
     </div>
 </div>
