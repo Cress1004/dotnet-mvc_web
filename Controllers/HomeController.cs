@@ -21,8 +21,6 @@ namespace dotnet_mvc_web.Controllers
 
         public ViewResult Index()
         {
-            ViewData["property1"] = "Thanh.NTH";
-            ViewData["book"] = new BookModel() {Id = 1, Author = "Michiokaku"};
             return View();
         }
 
