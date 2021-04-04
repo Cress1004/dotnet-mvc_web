@@ -21,11 +21,8 @@ namespace dotnet_mvc_web.Controllers
 
         public ViewResult Index()
         {
-            dynamic data = new ExpandoObject();
-            data.Id = 1;
-            data.Name = "Thanh.NTH";
-            ViewBag.Data = data;
-            ViewBag.Type = new BookModel() { Id = 5, Author = "Michiokaku", Title = "The world"};
+            ViewData["property1"] = "Thanh.NTH";
+            ViewData["book"] = new BookModel() {Id = 1, Author = "Michiokaku"};
             return View();
         }
 
