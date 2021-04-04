@@ -21,13 +21,12 @@ namespace dotnet_mvc_web.Controllers
             // https://localhost:5001/book/getallbook
         }
 
-        public ViewResult GetBook(int id, string nameOfBook) 
+
+        [Route("book-details/{id}", Name="bookDetailsRoute")]
+        public ViewResult GetBook(int id) 
         {
-            // var data = _bookRepository.GetBookById(id);
-            // use dynamic data
-            dynamic data = new System.Dynamic.ExpandoObject();
-            data.book = _bookRepository.GetBookById(id);
-            data.Name = "Thanh";
+            var data = _bookRepository.GetBookById(id);
+            
             return View(data);
             // return $"Book with id={id}";
             // https://localhost:5001/book/getbook/1

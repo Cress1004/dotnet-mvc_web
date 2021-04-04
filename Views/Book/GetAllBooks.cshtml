@@ -17,7 +17,7 @@
                             <p class="card-text">@book.Description</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <a asp-controller="book" asp-action="getbook" asp-route-id="@book.Id" asp-route-nameOfBook="@book.Title"
+                                    <a asp-route="bookDetailsRoute" asp-route-id="@book.Id"
                                         class="btn btn-sm btn-outline-secondary">View Details</a>
                                         @* asp-fragment="similarBooks" *@
                                 </div>
