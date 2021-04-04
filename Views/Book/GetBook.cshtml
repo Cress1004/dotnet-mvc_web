@@ -2,11 +2,11 @@
     @model IEnumerable<BookModel> *@
 
 @{
-    ViewData["Title"] = "Book Details" + Model.Title;
+    ViewData["Title"] = "Book Details" + Model.book.Title;
 }
 
 <div class="container">
-    <h3>Book Details</h3>
+    <h3>Book Details @Model.Name</h3>
     <div class="row">
         <div class="col-md-6">
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -36,19 +36,19 @@
         <div class="col-md-6">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>@Model.Title</h1>
+                    <h1>@Model.book.Title</h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 text-primary">
                     <span class="label label-primary">By: </span>
-                    <span class="monospaced">@Model.Author</span>
+                    <span class="monospaced">@Model.book.Author</span>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <p class="description">
-                        @Model.Description
+                        @Model.book.Description
                     </p>
                 </div>
             </div>
@@ -61,9 +61,9 @@
             <hr />
 
             <ul class="list-group">
-                <li class="list-group-item"><span class="font-weight-bold">Category - @Model.Category</span>...</li>
-                <li class="list-group-item"><span class="font-weight-bold">Total pages: @Model.TotalPages</span>...</li>
-                <li class="list-group-item"><span class="font-weight-bold">Language - @Model.Language</span>...</li>
+                <li class="list-group-item"><span class="font-weight-bold">Category - @Model.book.Category</span>...</li>
+                <li class="list-group-item"><span class="font-weight-bold">Total pages: @Model.book.TotalPages</span>...</li>
+                <li class="list-group-item"><span class="font-weight-bold">Language - @Model.book.Language</span>...</li>
             </ul>
         </div>
     </div>

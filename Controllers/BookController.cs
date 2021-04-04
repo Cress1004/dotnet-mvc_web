@@ -23,7 +23,11 @@ namespace dotnet_mvc_web.Controllers
 
         public ViewResult GetBook(int id) 
         {
-            var data = _bookRepository.GetBookById(id);
+            // var data = _bookRepository.GetBookById(id);
+            // use dynamic data
+            dynamic data = new System.Dynamic.ExpandoObject();
+            data.book = _bookRepository.GetBookById(id);
+            data.Name = "Thanh";
             return View(data);
             // return $"Book with id={id}";
             // https://localhost:5001/book/getbook/1
