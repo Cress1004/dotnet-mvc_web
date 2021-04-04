@@ -1,9 +1,4 @@
-﻿using System.Dynamic;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using dotnet_mvc_web.Models;
@@ -12,6 +7,15 @@ namespace dotnet_mvc_web.Controllers
 {
     public class HomeController : Controller
     {
+        [ViewData]
+        public string CustomProperty { get; set; }
+
+        [ViewData]
+        public string Title { get; set; }
+
+        [ViewData]
+        public BookModel Book { get; set; }
+
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -21,6 +25,9 @@ namespace dotnet_mvc_web.Controllers
 
         public ViewResult Index()
         {
+            Title = "Home Page Controller";
+            CustomProperty = "Custom Value";
+            Book = new BookModel() { Id = 1, Title = "Example" };
             return View();
         }
 
