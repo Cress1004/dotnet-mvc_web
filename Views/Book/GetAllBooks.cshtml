@@ -1,5 +1,3 @@
-@* @model IEnumerable<dotnet_mvc_web.Models.BookModel> *@
-@using dotnet_mvc_web.Models;
 @model IEnumerable<BookModel>;
 @{
     ViewData["Title"] = "Get All Books";
@@ -7,25 +5,27 @@
 
 <div class="text-center">
     <div class="container">
-         <h1 class="display-4">All Books</h1>
+        <h1 class="display-4">All Books</h1>
         <div class="row">
             @foreach (var book in Model)
             {
-            <div class="col-md-4">
-                <div class="card mb-4 shadow-sm" style="width: 18rem;">
-                    <img src="~/images/unnamed.jpg" class="card-img-top" alt="unnamed">
-                    <div class="card-body">
-                        <h3 class="card-title">@book.Title</h3>
-                        <p class="card-text">@book.Description</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <a href="/book/getbook/@book.Id" class="btn btn-sm btn-outline-secondary">View Details</a>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm" style="width: 18rem;">
+                        <img src="~/images/unnamed.jpg" class="card-img-top" alt="unnamed">
+                        <div class="card-body">
+                            <h3 class="card-title">@book.Title</h3>
+                            <p class="card-text">@book.Description</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a asp-controller="book" asp-action="getbook" asp-route-id="@book.Id" asp-route-nameOfBook="@book.Title"
+                                        class="btn btn-sm btn-outline-secondary">View Details</a>
+                                        @* asp-fragment="similarBooks" *@
+                                </div>
+                                <small class="text-muted">@book.Author</small>
                             </div>
-                            <small class="text-muted">@book.Author</small>
                         </div>
                     </div>
                 </div>
-            </div>                
             }
         </div>
     </div>

@@ -21,7 +21,7 @@ namespace dotnet_mvc_web.Controllers
             // https://localhost:5001/book/getallbook
         }
 
-        public ViewResult GetBook(int id) 
+        public ViewResult GetBook(int id, string nameOfBook) 
         {
             // var data = _bookRepository.GetBookById(id);
             // use dynamic data
