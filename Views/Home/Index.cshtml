@@ -1,17 +1,11 @@
-﻿@section breadcrumb {
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Page1</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Index</li>
-        </ol>
-    </nav>
+﻿@{
+    dynamic data = @ViewBag.Data; 
 }
 
-<!-- <section class="jumbotron text-center">
+<section class="jumbotron text-center">
     <div class="container">
         <img src="~/images/logo.png" class="logo" alt="logo">
-        <h1 class="display-4">Welcome To Home Page</h1>
+        <h1 class="display-4">Welcome To Home Page @data.Id, @data.Name</h1>
         <h3>@DateTime.Now</h3>
         <p>
             <a href="#" class="btn btn-primary my-2">Search Books</a>
@@ -67,7 +61,5 @@
                 </div>
             </div>
         </div>
-
     </div>
-
-</div> -->
+</div>

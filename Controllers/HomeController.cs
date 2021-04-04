@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Dynamic;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -18,8 +19,13 @@ namespace dotnet_mvc_web.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public ViewResult Index()
         {
+            dynamic data = new ExpandoObject();
+            data.Id = 1;
+            data.Name = "Thanh.NTH";
+            ViewBag.Data = data;
+            ViewBag.Type = new BookModel() { Id = 5, Author = "Michiokaku", Title = "The world"};
             return View();
         }
 
