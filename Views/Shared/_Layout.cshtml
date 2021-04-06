@@ -15,7 +15,9 @@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-                    <img src="~/images/cress.jpeg" class="logo" alt="logo">Book Store</a>
+                    <img src="~/images/cress.jpeg" class="logo" alt="logo" asp-append-version="true">Book Store</a>
+                    @* asp-append-version is a Image tag helper. It help generate image's key and version by hash*@
+                    @* Moi lan thay doi du lieu web thi du lieu bi thay doi do se duoc cache lai *@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
