@@ -15623,6 +15623,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/cress/dotnet/dotnet-mvc_web/Views/Book/AddNewBook.cshtml",
+      "TargetPath": "Views\\Book\\AddNewBook.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/cress/dotnet/dotnet-mvc_web/Views/Home/Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"

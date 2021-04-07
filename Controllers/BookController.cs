@@ -37,5 +37,16 @@ namespace dotnet_mvc_web.Controllers
             // return $"Book with name = {bookName} & authorName = {authorName}"
             // https://localhost:5001/book/searchbooks?bookName=cress&authorName=crescentmoon
         }
+
+        public ViewResult AddNewBook() 
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ViewResult AddNewBook(BookModel bookModel) 
+        {
+            return View();
+        }
     }
 }
