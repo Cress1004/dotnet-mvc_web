@@ -27,9 +27,10 @@ namespace dotnet_mvc_web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddDbContext<BookStoreContext>(options => options.UseSqlServer("Server=.; Database=BookStore; Integrated Security=True"));
-            
+            services.AddDbContext<BookStoreContext>(options => 
+               options.UseSqlServer("Server=.; Database=BookStore; Integrated Security=True; Trusted_Connection=True;"));
+            // services.AddDbContext<BookStoreContext>(options =>
+            //     options.UseMySQL("server=localhost;userid=root;password=;database=BookStore"));
             services.AddControllersWithViews();
             
             // To enable Razor Runtime Compilation
