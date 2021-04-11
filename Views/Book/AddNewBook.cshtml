@@ -3,32 +3,38 @@
     ViewData["Title"] = "AddNewBook";
 }
 <h3 class="display-4">Add New Book</h3>
-@if (ViewBag.IsSuccess != null && ViewBag.IsSuccess)
+@if (ViewBag.IsSuccess != null && ViewBag.IsSuccess == true)
 {
     <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Add new book success</strong>
-            Click <a 
-                    asp-controller="Book"
-                    asp-action="GetBook"
-                    asp-route-id="@ViewBag.BookId">here</a>
-            to view details
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
+    <strong>Add new book success</strong>
+    Click <a asp-controller="Book" asp-action="GetBook" asp-route-id="@ViewBag.BookId">here</a>
+    to view details
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
 }
 <form method="POST" asp-action="AddNewBook">
     <div class="form-group">
         <label asp-for="Title"></label>
         <input asp-for="Title" class="form-control" />
+        <small><span asp-validation-for="Title" class="text-danger"></span></small>
     </div>
     <div class="form-group">
         <label asp-for="Author"></label>
         <input asp-for="Author" class="form-control" />
+        <small><span asp-validation-for="Author" class="text-danger"></span></small>
+
     </div>
     <div class="form-group">
         <label asp-for="Description"></label></br>
         <textarea asp-for="Description" class="form control"></textarea>
+        <small><span asp-validation-for="Description" class="text-danger"></span></small>
+    </div>
+    <div class="form-group">
+        <label asp-for="TotalPages"></label>
+        <input asp-for="TotalPages" class="form-control" />
+        <small><span asp-validation-for="TotalPages" class="text-danger"></span></small>
     </div>
     <div class="form-group">
         <input type="submit" value="Add new book" class="btn btn-primary" />

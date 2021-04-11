@@ -9,8 +9,8 @@ namespace dotnet_mvc_web.Controllers
     public class BookController : Controller
     {
         private readonly BookRepository _bookRepository = null;
-        
-        public BookController(BookRepository bookRepository) 
+
+        public BookController(BookRepository bookRepository)
         {
             _bookRepository = bookRepository;
         }
@@ -22,23 +22,23 @@ namespace dotnet_mvc_web.Controllers
         }
 
 
-        [Route("book-details/{id}", Name="bookDetailsRoute")]
-        public async Task<ViewResult> GetBook(int id) 
+        [Route("book-details/{id}", Name = "bookDetailsRoute")]
+        public async Task<ViewResult> GetBook(int id)
         {
             var data = await _bookRepository.GetBookById(id);
-            
+
             return View(data);
             // return $"Book with id={id}";
             // https://localhost:5001/book/getbook/1
         }
-        public List<BookModel> SearchBooks(string bookName, string authorName) 
-        {
-            return _bookRepository.SearchBooks(bookName, authorName);
-            // return $"Book with name = {bookName} & authorName = {authorName}"
-            // https://localhost:5001/book/searchbooks?bookName=cress&authorName=crescentmoon
-        }
+        // public List<BookModel> SearchBooks(string bookName, string authorName)
+        // {
+        //     return _bookRepository.SearchBooks(bookName, authorName);
+        //     // return $"Book with name = {bookName} & authorName = {authorName}"
+        //     // https://localhost:5001/book/searchbooks?bookName=cress&authorName=crescentmoon
+        // }
 
-        public ViewResult AddNewBook(bool isSuccess = false, int bookId = 0) 
+        public ViewResult AddNewBook(bool isSuccess = false, int bookId = 0)
         {
             ViewBag.IsSuccess = isSuccess;
             ViewBag.BookId = bookId;
@@ -46,13 +46,19 @@ namespace dotnet_mvc_web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddNewBook(BookModel bookModel) 
+        public async Task<IActionResult> AddNewBook(BookModel bookModel)
         {
-            int id = await _bookRepository.AddNewBook(bookModel);
-            if (id > 0)
+            if (ModelState.IsValid)
             {
-                return RedirectToAction(nameof(AddNewBook), new { isSuccess = true, bookId = id });
+                int id = await _bookRepository.AddNewBook(bookModel);
+                if (id > 0)
+                {
+                    return RedirectToAction(nameof(AddNewBook), new { isSuccess = true, bookId = id });
+                }
+                return View();
             }
+            ViewBag.IsSuccess = false;
+            ViewBag.BookId = 0;
             return View();
         }
     }

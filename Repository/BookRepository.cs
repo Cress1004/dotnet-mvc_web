@@ -24,7 +24,7 @@ namespace dotnet_mvc_web.Repository
                 CreateOn = DateTime.UtcNow,
                 Description = model.Description,
                 Title = model.Title,
-                TotalPages = model.TotalPages,
+                TotalPages = model.TotalPages.HasValue ? model.TotalPages.Value : 0,
                 UpdateOn = DateTime.UtcNow,
             };
             await _context.Books.AddAsync(newBook);
@@ -84,19 +84,9 @@ namespace dotnet_mvc_web.Repository
             return null;
         }
 
-        public List<BookModel> SearchBooks(string title, string authorName)
-        {
-            return DataSource().Where(x => x.Title.Contains(title) || x.Author.Contains(authorName)).ToList();
-        }
-
-        private List<BookModel> DataSource()
-        {
-            return new List<BookModel>()
-            {
-                new BookModel() {Id = 1, Title = "Cress", Author = "CrescentMoon", Description = "The lunar chronicles chap 3", Category = "The lunar chronicles", Language = "English", TotalPages = 120},
-                // new BookModel() {Id = 2, Title = "Scarlet", Author = "Scarling", Description = "The Lunar Chronicles chap 2"},
-                // new BookModel() {Id = 3, Title = "Winter", Author = "Winter", Description = "The Lunar Chronicles chap 4"}
-            };
-        }
+        // public List<BookModel> SearchBooks(string title, string authorName)
+        // {
+        //     return DataSource().Where(x => x.Title.Contains(title) || x.Author.Contains(authorName)).ToList();
+        // }
     }
 }
