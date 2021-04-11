@@ -5,6 +5,9 @@ namespace dotnet_mvc_web.Models
 {
     public class BookModel
     {
+        [DataType(DataType.DateTime)]
+        [Display(Name="Enter date & Time")]
+        public string MyField { get; set; }
         public int Id { get; set; }
         [StringLength(100, MinimumLength=5)]
         [Required(ErrorMessage = "Please enter the book's title")]
