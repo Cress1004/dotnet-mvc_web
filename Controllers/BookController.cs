@@ -14,11 +14,10 @@ namespace dotnet_mvc_web.Controllers
         {
             _bookRepository = bookRepository;
         }
-        public ViewResult GetAllBooks()
+        public async Task<ViewResult> GetAllBooks()
         {
-            var data = _bookRepository.GetAllBooks();
+            var data = await _bookRepository.GetAllBooks();
             return View(data);
-            // return "This is all books";
             // https://localhost:5001/book/getallbook
         }
 

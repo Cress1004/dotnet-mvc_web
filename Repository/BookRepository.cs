@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using dotnet_mvc_web.Data;
 using dotnet_mvc_web.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace dotnet_mvc_web.Repository
 {
@@ -28,12 +29,30 @@ namespace dotnet_mvc_web.Repository
             };
             await _context.Books.AddAsync(newBook);
             await _context.SaveChangesAsync();
-            
+
             return newBook.Id;
         }
-        public List<BookModel> GetAllBooks()
+        public async Task<List<BookModel>> GetAllBooks()
         {
-            return DataSource();
+            var books = new List<BookModel>();
+            var allBooks = await _context.Books.ToListAsync();
+            if (allBooks?.Any() == true)
+            {
+                foreach (var book in allBooks)
+                {
+                    books.Add(new BookModel()
+                    {
+                        Author = book.Author,
+                        Category = book.Category,
+                        Description = book.Description,
+                        Id = book.Id,
+                        Language = book.Language,
+                        Title = book.Title,
+                        TotalPages = book.TotalPages,
+                    });
+                }
+            }
+            return books;
         }
 
         public BookModel GetBookById(int id)
