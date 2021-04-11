@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using dotnet_mvc_web.Models;
 using dotnet_mvc_web.Repository;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace dotnet_mvc_web.Controllers
 {
@@ -40,13 +41,12 @@ namespace dotnet_mvc_web.Controllers
 
         public ViewResult AddNewBook(bool isSuccess = false, int bookId = 0)
         {
-            var model = new BookModel()
-            {
-                Language = "",
-            };
+            ViewBag.Language = new SelectList(new List<string>() {
+                "Vietnamese", "Japanese", "English"
+            });
             ViewBag.IsSuccess = isSuccess;
             ViewBag.BookId = bookId;
-            return View(model);
+            return View();
         }
 
         [HttpPost]
@@ -61,6 +61,10 @@ namespace dotnet_mvc_web.Controllers
                 }
                 return View();
             }
+
+            ViewBag.Language = new SelectList(new List<string>(){
+                "Vietnamese", "Japanese", "English"
+            }); 
 
             ModelState.AddModelError("", "My error message");
             ModelState.AddModelError("", "My second error message");
