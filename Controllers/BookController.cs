@@ -57,8 +57,10 @@ namespace dotnet_mvc_web.Controllers
                 }
                 return View();
             }
-            ViewBag.IsSuccess = false;
-            ViewBag.BookId = 0;
+
+            ModelState.AddModelError("", "My error message");
+            ModelState.AddModelError("", "My second error message");
+            
             return View();
         }
     }
