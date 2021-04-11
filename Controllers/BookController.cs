@@ -40,9 +40,13 @@ namespace dotnet_mvc_web.Controllers
 
         public ViewResult AddNewBook(bool isSuccess = false, int bookId = 0)
         {
+            var model = new BookModel()
+            {
+                Language = "",
+            };
             ViewBag.IsSuccess = isSuccess;
             ViewBag.BookId = bookId;
-            return View();
+            return View(model);
         }
 
         [HttpPost]
@@ -60,7 +64,7 @@ namespace dotnet_mvc_web.Controllers
 
             ModelState.AddModelError("", "My error message");
             ModelState.AddModelError("", "My second error message");
-            
+
             return View();
         }
     }
