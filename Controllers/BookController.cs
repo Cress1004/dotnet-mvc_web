@@ -41,9 +41,7 @@ namespace dotnet_mvc_web.Controllers
 
         public ViewResult AddNewBook(bool isSuccess = false, int bookId = 0)
         {
-            ViewBag.Language = new SelectList(new List<string>() {
-                "Vietnamese", "Japanese", "English"
-            });
+            ViewBag.Language = new SelectList(GetLanguage(), "Id", "Text");
             ViewBag.IsSuccess = isSuccess;
             ViewBag.BookId = bookId;
             return View();
@@ -62,14 +60,21 @@ namespace dotnet_mvc_web.Controllers
                 return View();
             }
 
-            ViewBag.Language = new SelectList(new List<string>(){
-                "Vietnamese", "Japanese", "English"
-            }); 
+            ViewBag.Language = new SelectList(GetLanguage(), "Id", "Text"); 
 
             ModelState.AddModelError("", "My error message");
             ModelState.AddModelError("", "My second error message");
 
             return View();
+        }
+        private List<LanguageModel> GetLanguage()
+        {
+            return new List<LanguageModel>()
+            {
+                new LanguageModel() { Id = 1, Text = "Vietnamese" },
+                new LanguageModel() { Id = 2, Text = "English"},
+                new LanguageModel() { Id = 3, Text = "Japanese"},
+            };
         }
     }
 }
