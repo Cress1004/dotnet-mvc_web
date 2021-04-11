@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using dotnet_mvc_web.Data;
 using dotnet_mvc_web.Models;
 
@@ -14,7 +15,7 @@ namespace dotnet_mvc_web.Repository
         {
             _context = context;
         }
-        public int AddNewBook(BookModel model)
+        public async Task<int> AddNewBook(BookModel model)
         {
             var newBook = new Books()
             {
@@ -25,8 +26,8 @@ namespace dotnet_mvc_web.Repository
                 TotalPages = model.TotalPages,
                 UpdateOn = DateTime.UtcNow,
             };
-            _context.Books.Add(newBook);
-            _context.SaveChanges();
+            await _context.Books.AddAsync(newBook);
+            await _context.SaveChangesAsync();
             
             return newBook.Id;
         }

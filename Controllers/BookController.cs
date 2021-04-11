@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using dotnet_mvc_web.Models;
 using dotnet_mvc_web.Repository;
+using System.Threading.Tasks;
 
 namespace dotnet_mvc_web.Controllers
 {
@@ -46,9 +47,9 @@ namespace dotnet_mvc_web.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddNewBook(BookModel bookModel) 
+        public async Task<IActionResult> AddNewBook(BookModel bookModel) 
         {
-            int id = _bookRepository.AddNewBook(bookModel);
+            int id = await _bookRepository.AddNewBook(bookModel);
             if (id > 0)
             {
                 return RedirectToAction(nameof(AddNewBook), new { isSuccess = true, bookId = id });
