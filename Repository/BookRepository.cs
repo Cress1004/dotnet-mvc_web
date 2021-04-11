@@ -55,9 +55,33 @@ namespace dotnet_mvc_web.Repository
             return books;
         }
 
-        public BookModel GetBookById(int id)
+        public async Task<BookModel> GetBookById(int id)
         {
-            return DataSource().Where(x => x.Id == id).FirstOrDefault();
+            // var allBooks = await _context.Books.ToListAsync();
+            // if (allBooks?.Any() == true)
+            // {
+            //     bookDetails = allBooks.Where(x => x.Id == id).FirstOrDefault();
+            //     var book = new BookModel(){
+            //     ...
+            //     };
+            // }
+            // return book;
+            var book = await _context.Books.FindAsync(id);
+            if (book != null)
+            {
+                var bookDetails = new BookModel()
+                {
+                    Author = book.Author,
+                    Category = book.Category,
+                    Description = book.Description,
+                    Id = book.Id,
+                    Language = book.Language,
+                    Title = book.Title,
+                    TotalPages = book.TotalPages,
+                };
+                return bookDetails;
+            }
+            return null;
         }
 
         public List<BookModel> SearchBooks(string title, string authorName)
