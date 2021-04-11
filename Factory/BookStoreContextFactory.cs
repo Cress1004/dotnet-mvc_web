@@ -9,7 +9,7 @@ namespace dotnet_mvc_web.Factory
         public BookStoreContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<BookStoreContext>();
-            optionsBuilder.UseSqlServer("User ID=sa; password=Th@nh1004; Server=.; Database=BookStore;");
+            optionsBuilder.UseSqlServer("User ID=sa; password=Th@nh1004; Server=localhost; Database=BookStore; Trusted_Connection=False;");
             // optionsBuilder.UseMySQL("server=localhost;userid=root;password=;database=BookStore");
             return new BookStoreContext(optionsBuilder.Options);
         }

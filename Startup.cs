@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using dotnet_mvc_web.Data;
+using dotnet_mvc_web.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,13 +29,11 @@ namespace dotnet_mvc_web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<BookStoreContext>(options => 
-               options.UseSqlServer("Server=.; Database=BookStore; Integrated Security=True; Trusted_Connection=True;"));
-            // services.AddDbContext<BookStoreContext>(options =>
-            //     options.UseMySQL("server=localhost;userid=root;password=;database=BookStore"));
+               options.UseSqlServer("User ID=sa; password=Th@nh1004; Server=localhost; Database=BookStore; Trusted_Connection=False;"));
             services.AddControllersWithViews();
-            
             // To enable Razor Runtime Compilation
             services.AddRazorPages().AddRazorRuntimeCompilation();
+            services.AddScoped<BookRepository, BookRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

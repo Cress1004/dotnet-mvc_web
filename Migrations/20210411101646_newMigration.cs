@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace dotnet_mvc_web.Migrations
 {
-    public partial class Init : Migration
+    public partial class newMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -18,7 +19,9 @@ namespace dotnet_mvc_web.Migrations
                     Description = table.Column<string>(nullable: true),
                     Category = table.Column<string>(nullable: true),
                     Language = table.Column<string>(nullable: true),
-                    TotalPages = table.Column<int>(nullable: false)
+                    TotalPages = table.Column<int>(nullable: false),
+                    CreateOn = table.Column<DateTime>(nullable: true),
+                    UpdateOn = table.Column<DateTime>(nullable: true)
                 },
                 constraints: table =>
                 {

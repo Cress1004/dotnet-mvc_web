@@ -9,9 +9,9 @@ namespace dotnet_mvc_web.Controllers
     {
         private readonly BookRepository _bookRepository = null;
         
-        public BookController() 
+        public BookController(BookRepository bookRepository) 
         {
-            _bookRepository = new BookRepository();
+            _bookRepository = bookRepository;
         }
         public ViewResult GetAllBooks()
         {
@@ -38,14 +38,21 @@ namespace dotnet_mvc_web.Controllers
             // https://localhost:5001/book/searchbooks?bookName=cress&authorName=crescentmoon
         }
 
-        public ViewResult AddNewBook() 
+        public ViewResult AddNewBook(bool isSuccess = false, int bookId = 0) 
         {
+            ViewBag.IsSuccess = isSuccess;
+            ViewBag.BookId = bookId;
             return View();
         }
 
         [HttpPost]
-        public ViewResult AddNewBook(BookModel bookModel) 
+        public IActionResult AddNewBook(BookModel bookModel) 
         {
+            int id = _bookRepository.AddNewBook(bookModel);
+            if (id > 0)
+            {
+                return RedirectToAction(nameof(AddNewBook), new { isSuccess = true, bookId = id });
+            }
             return View();
         }
     }
