@@ -35,9 +35,9 @@
         <label asp-for="Language"></label>
         <select asp-for="Language" class="form-control">
             <option value="">Please Choose The language</option>
-            <option>Vietnamese</option>
-            <option>English</option>
-            <option>Japanese</option>
+            <option value="Vietnamese">Vietnamese</option>
+            <option value="English">English</option>
+            <option value="Japanese">Japanese</option>
         </select>
         <small><span asp-validation-for="Language" class="text-danger"></span></small>
     </div>
