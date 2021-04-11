@@ -9,8 +9,8 @@ using dotnet_mvc_web.Data;
 namespace dotnet_mvc_web.Migrations
 {
     [DbContext(typeof(BookStoreContext))]
-    [Migration("20210410143337_init")]
-    partial class init
+    [Migration("20210411055009_Init")]
+    partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
