@@ -34,6 +34,7 @@ namespace dotnet_mvc_web
             // To enable Razor Runtime Compilation
             services.AddRazorPages().AddRazorRuntimeCompilation();
             services.AddScoped<BookRepository, BookRepository>();
+            services.AddScoped<LanguageRepository, LanguageRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

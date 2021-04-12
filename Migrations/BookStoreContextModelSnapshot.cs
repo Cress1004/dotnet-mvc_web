@@ -33,7 +33,7 @@ namespace dotnet_mvc_web.Migrations
 
                     b.Property<string>("Description");
 
-                    b.Property<string>("Language");
+                    b.Property<int>("LanguageId");
 
                     b.Property<string>("Title");
 
@@ -43,7 +43,32 @@ namespace dotnet_mvc_web.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("LanguageId");
+
                     b.ToTable("Books");
+                });
+
+            modelBuilder.Entity("dotnet_mvc_web.Data.Language", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description");
+
+                    b.Property<string>("Text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Language");
+                });
+
+            modelBuilder.Entity("dotnet_mvc_web.Data.Books", b =>
+                {
+                    b.HasOne("dotnet_mvc_web.Data.Language", "Language")
+                        .WithMany("Books")
+                        .HasForeignKey("LanguageId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

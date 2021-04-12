@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using dotnet_mvc_web.Data;
 using dotnet_mvc_web.Enums;
 
 namespace dotnet_mvc_web.Models
@@ -17,6 +18,7 @@ namespace dotnet_mvc_web.Models
         public string Description { get; set; }
         public string Category { get; set; }
         //[Required(ErrorMessage = "Please select language")]
+        public int LanguageId { get; set; }
         public string Language { get; set; }
         [Required(ErrorMessage = "Please select languages")]
         public LanguageEnum EnumLanguage { get; set; }

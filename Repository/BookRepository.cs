@@ -23,6 +23,7 @@ namespace dotnet_mvc_web.Repository
                 Author = model.Author,
                 CreateOn = DateTime.UtcNow,
                 Description = model.Description,
+                LanguageId = model.LanguageId,
                 Title = model.Title,
                 TotalPages = model.TotalPages.HasValue ? model.TotalPages.Value : 0,
                 UpdateOn = DateTime.UtcNow,
@@ -46,7 +47,8 @@ namespace dotnet_mvc_web.Repository
                         Category = book.Category,
                         Description = book.Description,
                         Id = book.Id,
-                        Language = book.Language,
+                        LanguageId = book.LanguageId,
+                        Language = book.Language.Text,
                         Title = book.Title,
                         TotalPages = book.TotalPages,
                     });
@@ -57,36 +59,17 @@ namespace dotnet_mvc_web.Repository
 
         public async Task<BookModel> GetBookById(int id)
         {
-            // var allBooks = await _context.Books.ToListAsync();
-            // if (allBooks?.Any() == true)
-            // {
-            //     bookDetails = allBooks.Where(x => x.Id == id).FirstOrDefault();
-            //     var book = new BookModel(){
-            //     ...
-            //     };
-            // }
-            // return book;
-            var book = await _context.Books.FindAsync(id);
-            if (book != null)
+            return await _context.Books.Where(x => x.Id == id).Select(book => new BookModel()
             {
-                var bookDetails = new BookModel()
-                {
-                    Author = book.Author,
-                    Category = book.Category,
-                    Description = book.Description,
-                    Id = book.Id,
-                    Language = book.Language,
-                    Title = book.Title,
-                    TotalPages = book.TotalPages,
-                };
-                return bookDetails;
-            }
-            return null;
+                Author = book.Author,
+                Category = book.Category,
+                Description = book.Description,
+                Id = book.Id,
+                LanguageId = book.LanguageId,
+                Language = book.Language.Text,
+                Title = book.Title,
+                TotalPages = book.TotalPages,
+            }).FirstOrDefaultAsync();
         }
-
-        // public List<BookModel> SearchBooks(string title, string authorName)
-        // {
-        //     return DataSource().Where(x => x.Title.Contains(title) || x.Author.Contains(authorName)).ToList();
-        // }
     }
 }

@@ -11,10 +11,11 @@ namespace dotnet_mvc_web.Controllers
     public class BookController : Controller
     {
         private readonly BookRepository _bookRepository = null;
-
-        public BookController(BookRepository bookRepository)
+        private readonly LanguageRepository _languageRepository = null;
+        public BookController(BookRepository bookRepository, LanguageRepository languageRepository)
         {
             _bookRepository = bookRepository;
+            _languageRepository = languageRepository;
         }
         public async Task<ViewResult> GetAllBooks()
         {
@@ -40,8 +41,9 @@ namespace dotnet_mvc_web.Controllers
         //     // https://localhost:5001/book/searchbooks?bookName=cress&authorName=crescentmoon
         // }
 
-        public ViewResult AddNewBook(bool isSuccess = false, int bookId = 0)
+        public async Task<ViewResult> AddNewBookAsync(bool isSuccess = false, int bookId = 0)
         {
+            ViewBag.Language = new SelectList(await _languageRepository.GetLanguages(), "Id", "Text");
             ViewBag.IsSuccess = isSuccess;
             ViewBag.BookId = bookId;
             return View();
@@ -59,6 +61,8 @@ namespace dotnet_mvc_web.Controllers
                 }
             }
 
+            ViewBag.Language = new SelectList(await _languageRepository.GetLanguages(), "Id", "Text");
+            
             return View();
         }
     }
