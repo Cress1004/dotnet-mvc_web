@@ -42,15 +42,12 @@ namespace dotnet_mvc_web.Controllers
 
         public ViewResult AddNewBook(bool isSuccess = false, int bookId = 0)
         {
-            var group1 = new SelectListGroup() { Name = "group 1" };
-            var group2 = new SelectListGroup() { Name = "group 2" };
-            var group3 = new SelectListGroup() { Name = "group 3" };
             ViewBag.Language = new List<SelectListItem>()
             {
-                new SelectListItem() {Text = "Vietnamese", Value = "1", Group = group1},
-                new SelectListItem() {Text = "English", Value = "2", Group = group2},
-                new SelectListItem() {Text = "Japanese", Value = "3", Group = group3},
-                new SelectListItem() {Text = "Chinese", Value = "3", Group = group3},
+                new SelectListItem() {Text = "Vietnamese", Value = "1"},
+                new SelectListItem() {Text = "English", Value = "2"},
+                new SelectListItem() {Text = "Japanese", Value = "3"},
+                new SelectListItem() {Text = "Chinese", Value = "3"},
             };
             ViewBag.IsSuccess = isSuccess;
             ViewBag.BookId = bookId;
@@ -67,23 +64,16 @@ namespace dotnet_mvc_web.Controllers
                 {
                     return RedirectToAction(nameof(AddNewBook), new { isSuccess = true, bookId = id });
                 }
-                return View();
             }
-
-            ModelState.AddModelError("", "My error message");
-            ModelState.AddModelError("", "My second error message");
+              ViewBag.Language = new List<SelectListItem>()
+            {
+                new SelectListItem() {Text = "Vietnamese", Value = "1"},
+                new SelectListItem() {Text = "English", Value = "2"},
+                new SelectListItem() {Text = "Japanese", Value = "3"},
+                new SelectListItem() {Text = "Chinese", Value = "3"},
+            };
 
             return View();
         }
-
-        //         private List<LanguageModel> GetLanguage()
-        //         {
-        //             return new List<LanguageModel>()
-        //             {
-        //                 new LanguageModel() { Id = 1, Text = "Vietnamese" },
-        //                 new LanguageModel() { Id = 2, Text = "English"},
-        //                 new LanguageModel() { Id = 3, Text = "Japanese"},
-        //             };
-        //         }
     }
 }
