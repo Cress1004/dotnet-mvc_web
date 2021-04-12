@@ -1,3 +1,4 @@
+@using dotnet_mvc_web.Enums
 @model BookModel
 @{
     ViewData["Title"] = "AddNewBook";
@@ -33,11 +34,11 @@
         <small><span asp-validation-for="Description" class="text-danger"></span></small>
     </div>
     <div class="form-group">
-        <label asp-for="MultiLanguages"></label>
-        <select asp-for="MultiLanguages" class="form-control" asp-items="ViewBag.Language" multiple>
-            <option value="">Please choose MultiLanguages</option>
+        <label asp-for="EnumLanguage"></label>
+        <select asp-for="EnumLanguage" class="form-control" asp-items="Html.GetEnumSelectList<LanguageEnum>()">
+            <option value="">Please choose EnumLanguage</option>
         </select>
-        <small><span asp-validation-for="MultiLanguages" class="text-danger"></span></small>
+        <small><span asp-validation-for="EnumLanguage" class="text-danger"></span></small>
     </div>
     <div class="form-group">
         <label asp-for="TotalPages"></label>

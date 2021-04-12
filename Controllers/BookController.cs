@@ -42,13 +42,6 @@ namespace dotnet_mvc_web.Controllers
 
         public ViewResult AddNewBook(bool isSuccess = false, int bookId = 0)
         {
-            ViewBag.Language = new List<SelectListItem>()
-            {
-                new SelectListItem() {Text = "Vietnamese", Value = "1"},
-                new SelectListItem() {Text = "English", Value = "2"},
-                new SelectListItem() {Text = "Japanese", Value = "3"},
-                new SelectListItem() {Text = "Chinese", Value = "3"},
-            };
             ViewBag.IsSuccess = isSuccess;
             ViewBag.BookId = bookId;
             return View();
@@ -65,13 +58,6 @@ namespace dotnet_mvc_web.Controllers
                     return RedirectToAction(nameof(AddNewBook), new { isSuccess = true, bookId = id });
                 }
             }
-              ViewBag.Language = new List<SelectListItem>()
-            {
-                new SelectListItem() {Text = "Vietnamese", Value = "1"},
-                new SelectListItem() {Text = "English", Value = "2"},
-                new SelectListItem() {Text = "Japanese", Value = "3"},
-                new SelectListItem() {Text = "Chinese", Value = "3"},
-            };
 
             return View();
         }

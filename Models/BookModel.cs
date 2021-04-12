@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using dotnet_mvc_web.Enums;
 
 namespace dotnet_mvc_web.Models
 {
@@ -18,7 +19,7 @@ namespace dotnet_mvc_web.Models
         //[Required(ErrorMessage = "Please select language")]
         public string Language { get; set; }
         [Required(ErrorMessage = "Please select languages")]
-        public List<string> MultiLanguages { get; set; }
+        public LanguageEnum EnumLanguage { get; set; }
         [Required(ErrorMessage = "Please enter the book's total pages")]
         [Display(Name="Total Pages of Book")]
         public int? TotalPages { get; set; }
