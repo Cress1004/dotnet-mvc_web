@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using dotnet_mvc_web.Models;
@@ -41,7 +42,17 @@ namespace dotnet_mvc_web.Controllers
 
         public ViewResult AddNewBook(bool isSuccess = false, int bookId = 0)
         {
-            ViewBag.Language = new SelectList(GetLanguage(), "Id", "Text");
+            ViewBag.Language = GetLanguage().Select(x => new SelectListItem()
+            {
+                Text = x.Text,
+                Value = x.Id.ToString()
+            }).ToList();
+            // ViewBag.Language = new List<SelectListItem>()
+            // {
+            //     new SelectListItem() {Text = "Vietnamese", Value = "1", Disabled = true},
+            //     new SelectListItem() {Text = "English", Value = "2"},
+            //     new SelectListItem() {Text = "Japanese", Value = "3"},
+            // };
             ViewBag.IsSuccess = isSuccess;
             ViewBag.BookId = bookId;
             return View();
