@@ -48,7 +48,7 @@ namespace dotnet_mvc_web.Repository
                         Description = book.Description,
                         Id = book.Id,
                         LanguageId = book.LanguageId,
-                        Language = book.Language.Text,
+                        Language = book.Language.Name,
                         Title = book.Title,
                         TotalPages = book.TotalPages,
                     });
@@ -66,7 +66,7 @@ namespace dotnet_mvc_web.Repository
                 Description = book.Description,
                 Id = book.Id,
                 LanguageId = book.LanguageId,
-                Language = book.Language.Text,
+                Language = book.Language.Name,
                 Title = book.Title,
                 TotalPages = book.TotalPages,
             }).FirstOrDefaultAsync();

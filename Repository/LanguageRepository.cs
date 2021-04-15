@@ -20,7 +20,7 @@ namespace dotnet_mvc_web.Repository
             {
                 Id = x.Id,
                 Description = x.Description,
-                Text = x.Text,
+                Name = x.Name,
             }).ToListAsync();
         }
     }

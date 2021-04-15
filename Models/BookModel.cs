@@ -20,8 +20,7 @@ namespace dotnet_mvc_web.Models
         //[Required(ErrorMessage = "Please select language")]
         public int LanguageId { get; set; }
         public string Language { get; set; }
-        [Required(ErrorMessage = "Please select languages")]
-        public LanguageEnum EnumLanguage { get; set; }
+    
         [Required(ErrorMessage = "Please enter the book's total pages")]
         [Display(Name="Total Pages of Book")]
         public int? TotalPages { get; set; }
