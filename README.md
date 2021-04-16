@@ -3,9 +3,11 @@ To install Razor file compilation run in terminal the follow command:
 From website: https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/
 
 To install Entity Framework Core, run this follow command:
-    $ dotnet add package Microsoft.EntityFrameworkCore -v 2.1.14
+    $ dotnet add package Microsoft.EntityFrameworkCore -v 2.1.14 -> change to 5.0 version to use MYSQL
     $ dotnet add package Microsoft.EntityFrameworkCore.tools -v 2.1.14
     $ dotnet add package Microsoft.EntityFrameworkCore.SqlServer -v 2.1.14
+    Update Mysql EF version to use MySQL
+    $ dotnet add package MySql.EntityFrameworkCore --version 5.0.0+m8.0.23
 
 Migration overview
 * Install dotnet-ef: 

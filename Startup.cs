@@ -29,7 +29,9 @@ namespace dotnet_mvc_web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<BookStoreContext>(options => 
-               options.UseSqlServer("User ID=sa; password=Th@nh1004; Server=localhost; Database=BookStore; Trusted_Connection=False;"));
+               // options.UseSqlServer("User ID=sa; password=Th@nh1004; Server=localhost; Database=BookStore; Trusted_Connection=False;")
+               options.UseMySQL("server=localhost;userid=root;password=12345678;database=BookStore")
+               );
             services.AddControllersWithViews();
             // To enable Razor Runtime Compilation
             services.AddRazorPages().AddRazorRuntimeCompilation();
