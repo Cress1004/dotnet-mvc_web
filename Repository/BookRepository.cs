@@ -35,26 +35,17 @@ namespace dotnet_mvc_web.Repository
         }
         public async Task<List<BookModel>> GetAllBooks()
         {
-            var books = new List<BookModel>();
-            var allBooks = await _context.Books.ToListAsync();
-            if (allBooks?.Any() == true)
-            {
-                foreach (var book in allBooks)
-                {
-                    books.Add(new BookModel()
-                    {
-                        Author = book.Author,
-                        Category = book.Category,
-                        Description = book.Description,
-                        Id = book.Id,
-                        LanguageId = book.LanguageId,
-                        Language = book.Language.Name,
-                        Title = book.Title,
-                        TotalPages = book.TotalPages,
-                    });
-                }
-            }
-            return books;
+            return await _context.Books.Select(book => new BookModel()
+                  {
+                      Author = book.Author,
+                      Category = book.Category,
+                      Description = book.Description,
+                      Id = book.Id,
+                      LanguageId = book.LanguageId,
+                      Language = book.Language.Name,
+                      Title = book.Title,
+                      TotalPages = book.TotalPages
+                  }).ToListAsync();
         }
 
         public async Task<BookModel> GetBookById(int id)

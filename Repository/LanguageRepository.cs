@@ -14,6 +14,18 @@ namespace dotnet_mvc_web.Repository
         {
             _context = context;
         }
+        public async Task<int> AddNewLanguage(LanguageModel language)
+        {
+            var newLanguage = new Language()
+            {
+                Id = language.Id,
+                Name = language.Name,
+                Description = language.Description
+            };
+            await _context.Language.AddAsync(newLanguage);
+            await _context.SaveChangesAsync();
+            return newLanguage.Id;
+        }
         public async Task<List<LanguageModel>> GetLanguages()
         {
             return await _context.Language.Select(x => new LanguageModel()

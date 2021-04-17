@@ -15624,6 +15624,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/huydaodang/Thanh's folder/dotnet-mvc_web/Views/Language/AddNewLanguage.cshtml",
+      "TargetPath": "Views\\Language\\AddNewLanguage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/huydaodang/Thanh's folder/dotnet-mvc_web/Views/Shared/_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
@@ -15671,6 +15676,11 @@
     {
       "FilePath": "/Users/huydaodang/Thanh's folder/dotnet-mvc_web/Views/Book/AddNewBook.cshtml",
       "TargetPath": "Views\\Book\\AddNewBook.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/huydaodang/Thanh's folder/dotnet-mvc_web/Views/Language/GetLanguages.cshtml",
+      "TargetPath": "Views\\Language\\GetLanguages.cshtml",
       "FileKind": "mvc"
     },
     {
