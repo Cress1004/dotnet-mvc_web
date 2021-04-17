@@ -30,11 +30,15 @@ namespace dotnet_mvc_web
         {
             services.AddDbContext<BookStoreContext>(options => 
                // options.UseSqlServer("User ID=sa; password=Th@nh1004; Server=localhost; Database=BookStore; Trusted_Connection=False;")
-               options.UseMySQL("server=localhost;userid=root;password=12345678;database=BookStore")
+               options.UseMySQL("Server=localhost;Uid=root;password=th@nh1004;Database=bookstore;Port=3306")
                );
             services.AddControllersWithViews();
             // To enable Razor Runtime Compilation
-            services.AddRazorPages().AddRazorRuntimeCompilation();
+            services.AddRazorPages().AddRazorRuntimeCompilation();            
+            // Uncomment this code to disable client side Validation
+            // .AddViewOptions(options => {
+            //     options.HtmlHelperOptions.ClientValidationEnabled = false;
+            // } );
             services.AddScoped<BookRepository, BookRepository>();
             services.AddScoped<LanguageRepository, LanguageRepository>();
         }

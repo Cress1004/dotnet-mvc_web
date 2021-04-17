@@ -27,3 +27,7 @@ Migration overview
 // Need to add Factory File. References: 
     https://docs.microsoft.com/vi-vn/ef/core/cli/dbcontext-creation?tabs=dotnet-core-cli
 - Install dotnet add packageMysql.Data.EntityFrameworkCore
+
+- Instal Jquery 
+    dotnet add package Microsoft.jQuery.Unobtrusive.Validation --version 3.2.12
+    

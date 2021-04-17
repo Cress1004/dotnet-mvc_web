@@ -11,9 +11,9 @@ namespace dotnet_mvc_web.Models
     {
         public int Id { get; set; }
         // [StringLength(100, MinimumLength=5)]
-        // [Required(ErrorMessage = "Please enter the book's title")]
+        [Required(ErrorMessage = "Please enter the book's title")]
         // [MyCustomValidationAttribute("cress")]
-        [MyCustomValidationAttribute(ErrorMessage = "This is custom Error Message for custom Validation", Text = "cress")]
+        // [MyCustomValidationAttribute(ErrorMessage = "This is custom Error Message for custom Validation", Text = "cress")]
         public string Title { get; set; }
         [Required(ErrorMessage = "Please enter the book's author")]
         public string Author { get; set; }

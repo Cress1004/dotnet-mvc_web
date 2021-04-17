@@ -9,7 +9,7 @@ using dotnet_mvc_web.Data;
 namespace dotnet_mvc_web.Migrations
 {
     [DbContext(typeof(BookStoreContext))]
-    [Migration("20210416162451_NewMigragiton")]
+    [Migration("20210504082549_NewMigragiton")]
     partial class NewMigragiton
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

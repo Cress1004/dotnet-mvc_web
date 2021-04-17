@@ -15,11 +15,12 @@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-                    <img src="~/images/cress.jpeg" class="logo" alt="logo" asp-append-version="true">Book Store</a>
-                    @* asp-append-version is a Image tag helper. It help generate image's key and version by hash*@
-                    @* Moi lan thay doi du lieu web thi du lieu bi thay doi do se duoc cache lai *@
+                    <img src="~/images/cress.jpeg" class="logo" alt="logo" asp-append-version="true">Book Store
+                </a>
+                @* asp-append-version is a Image tag helper. It help generate image's key and version by hash*@
+                @* Moi lan thay doi du lieu web thi du lieu bi thay doi do se duoc cache lai *@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
@@ -40,23 +41,25 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Book" asp-action="GetAllBooks">List Books</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AboutUs">About
-                                Us</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AboutUs">
+                                About
+                                Us
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home"
-                                asp-action="ContactUs">Contact Us</a>
+                               asp-action="ContactUs">Contact Us</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-protocol="http" asp-host="thanh.com" asp-area="" asp-controller="book"
-                                asp-action="getAllBooks">New Link</a>
+                               asp-action="getAllBooks">New Link</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    @RenderSection("breadcrumb", required: false)
+    @RenderSection("scripts", required: false)
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -67,16 +70,20 @@
         <div class="container">
             Copyright &copy; Book Store @DateTime.Now.Year
             @* <href="mailto:nuhoangchenhac@gmail.com">nuhoangchenhac@gmail.com</href> *@
-        <custom-email my-email="nuhoangchecnhac@gmail.com"></custom-email>
+            <custom-email my-email="nuhoangchecnhac@gmail.com"></custom-email>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery-validation/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js
     <script src="~/js/site.js" asp-append-version="true"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajax-unobtrusive/3.2.6/jquery.unobtrusive-ajax.min.js"></script>
+
     @* @await RenderSectionAsync("Scripts", required: false) *@
 </body>
 
