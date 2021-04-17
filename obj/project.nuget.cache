@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "V3ibslB+sx75r6hhsYchIpvZFqBeDmEMMk7uf77xnhZKMa2p/QX/iZaqXsJr9msZ+nXB+HPDt5Vx1LiEfxX2Tw==",
+  "dgSpecHash": "M4wKGLGP11GA2oPqMgTYGU0aR0TCB3Fmet41v0fM69oyNzhrnC0UWJnYkk8nkOyz0wd0gzey4SLSw2J+IT4KYA==",
   "success": true,
   "projectFilePath": "/Users/huydaodang/Thanh's folder/dotnet-mvc_web/dotnet-mvc_web.csproj",
   "expectedPackageFiles": [
     "/Users/huydaodang/.nuget/packages/bouncycastle.netcore/1.8.5/bouncycastle.netcore.1.8.5.nupkg.sha512",
     "/Users/huydaodang/.nuget/packages/google.protobuf/3.11.4/google.protobuf.3.11.4.nupkg.sha512",
     "/Users/huydaodang/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
+    "/Users/huydaodang/.nuget/packages/jquery/1.8.0/jquery.1.8.0.nupkg.sha512",
+    "/Users/huydaodang/.nuget/packages/jquery.validation/1.8.0.1/jquery.validation.1.8.0.1.nupkg.sha512",
     "/Users/huydaodang/.nuget/packages/k4os.compression.lz4/1.1.11/k4os.compression.lz4.1.1.11.nupkg.sha512",
     "/Users/huydaodang/.nuget/packages/k4os.compression.lz4.streams/1.1.11/k4os.compression.lz4.streams.1.1.11.nupkg.sha512",
     "/Users/huydaodang/.nuget/packages/k4os.hash.xxhash/1.0.6/k4os.hash.xxhash.1.0.6.nupkg.sha512",
@@ -34,6 +36,7 @@
     "/Users/huydaodang/.nuget/packages/microsoft.extensions.logging.abstractions/5.0.0/microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "/Users/huydaodang/.nuget/packages/microsoft.extensions.options/5.0.0/microsoft.extensions.options.5.0.0.nupkg.sha512",
     "/Users/huydaodang/.nuget/packages/microsoft.extensions.primitives/5.0.0/microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "/Users/huydaodang/.nuget/packages/microsoft.jquery.unobtrusive.validation/3.2.12/microsoft.jquery.unobtrusive.validation.3.2.12.nupkg.sha512",
     "/Users/huydaodang/.nuget/packages/microsoft.netcore.platforms/3.1.0/microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "/Users/huydaodang/.nuget/packages/microsoft.win32.systemevents/4.7.0/microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "/Users/huydaodang/.nuget/packages/mysql.data/8.0.23/mysql.data.8.0.23.nupkg.sha512",

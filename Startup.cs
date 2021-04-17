@@ -34,7 +34,11 @@ namespace dotnet_mvc_web
                );
             services.AddControllersWithViews();
             // To enable Razor Runtime Compilation
-            services.AddRazorPages().AddRazorRuntimeCompilation();
+            services.AddRazorPages().AddRazorRuntimeCompilation();            
+            // Uncomment this code to disable client side Validation
+            // .AddViewOptions(options => {
+            //     options.HtmlHelperOptions.ClientValidationEnabled = false;
+            // } );
             services.AddScoped<BookRepository, BookRepository>();
             services.AddScoped<LanguageRepository, LanguageRepository>();
         }
