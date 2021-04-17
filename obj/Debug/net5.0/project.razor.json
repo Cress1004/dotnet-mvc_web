@@ -11426,6 +11426,30 @@
         }
       },
       {
+        "HashCode": -587441978,
+        "Kind": "ITagHelper",
+        "Name": "dotnet_mvc_web.Helpers.BigTagHelper",
+        "AssemblyName": "dotnet-mvc_web",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "big"
+          },
+          {
+            "TagName": "*",
+            "Attributes": [
+              {
+                "Name": "big"
+              }
+            ]
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "dotnet_mvc_web.Helpers.BigTagHelper"
+        }
+      },
+      {
         "HashCode": -838507990,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper",

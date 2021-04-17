@@ -27,7 +27,7 @@ using dotnet_mvc_web.Models;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7bc93abc0a312a5f76d0db8ddce4489a4a92aa48", @"/Views/Language/AddNewLanguage.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a17a5070de160b6935d6b0bc0b8936b6fe91a3dc", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2ec8a79f37dd75cf31989a6f7f47915a38360e7d", @"/Views/_ViewImports.cshtml")]
     public class Views_Language_AddNewLanguage : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<LanguageModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("form-control"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
