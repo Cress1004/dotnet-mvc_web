@@ -11400,6 +11400,32 @@
         }
       },
       {
+        "HashCode": 549627096,
+        "Kind": "ITagHelper",
+        "Name": "dotnet_mvc_web.Helpers.CustomEmailTagHelper",
+        "AssemblyName": "dotnet-mvc_web",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "custom-email"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "my-email",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "MyEmail"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "dotnet_mvc_web.Helpers.CustomEmailTagHelper"
+        }
+      },
+      {
         "HashCode": -838507990,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper",
