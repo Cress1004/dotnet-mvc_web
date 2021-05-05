@@ -16,17 +16,7 @@
 </div>
 }
 
-<div class="d-flex align-items-center" id="myLoader" style="display:none">
-    <strong>Loading...</strong>
-    <div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
-</div>
-
-<form method="POST" data-ajax="true" 
-      data-ajax-complete="myComplete" 
-      data-ajax-success="mySuccess" 
-      data-ajax-failure="myFailure"
-      data-ajax-loading="#myLoader"
-      asp-action="AddNewBook">
+<form method="POST" enctype="multipart/form-data" asp-action="AddNewBook">
     <div class="form-group">
         <label asp-for="Title"></label>
         <input asp-for="Title" class="form-control" />
@@ -55,22 +45,14 @@
         <small><span asp-validation-for="TotalPages" class="text-danger"></span></small>
     </div>
     <div class="form-group">
+        <label asp-for="CoverPhoto"></label>
+        <div class="custom-file">
+            <input asp-for="CoverPhoto" class="custom-file-input" id="customFile">
+            <label class="custom-file-label" for="customFile">Choose file</label>
+        </div>
+        <small><span asp-validation-for="CoverPhoto" class="text-danger"></span></small>
+    </div>
+    <div class="form-group">
         <input type="submit" value="Add new book" class="btn btn-primary" />
     </div>
 </form>
-
-@section scripts {
-    <script>
-        function myComplete(data) {
-            alert("Complete");
-        }
-
-        function mySuccess(data) {
-            alert("Success");
-        }
-
-        function myFailure(data) {
-            alert("Failure")
-        }
-    </script>
-}

@@ -1,11 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Data",
-    "\\Helpers",
-    "\\Migrations",
+    "\\Controllers",
     "\\Models",
-    "\\Repository"
+    "\\Repository",
+    "\\Views",
+    "\\Views\\Book",
+    "\\Views\\Shared",
+    "\\wwwroot",
+    "\\wwwroot\\lib",
+    "\\wwwroot\\lib\\jquery-validation\\dist"
   ],
+  "SelectedNode": "\\Views\\Shared\\_Layout.cshtml",
   "PreviewInSolutionExplorer": false
 }

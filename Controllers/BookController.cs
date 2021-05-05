@@ -1,9 +1,11 @@
 using System.Linq;
+using System.IO;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using dotnet_mvc_web.Models;
 using dotnet_mvc_web.Repository;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace dotnet_mvc_web.Controllers
@@ -12,10 +14,15 @@ namespace dotnet_mvc_web.Controllers
     {
         private readonly BookRepository _bookRepository = null;
         private readonly LanguageRepository _languageRepository = null;
-        public BookController(BookRepository bookRepository, LanguageRepository languageRepository)
-        {
+        private readonly IWebHostEnvironment _webHostEnvironment;
+        public BookController(
+            BookRepository bookRepository, 
+            LanguageRepository languageRepository,
+            IWebHostEnvironment webHostEnvironment
+         ) {
             _bookRepository = bookRepository;
             _languageRepository = languageRepository;
+            _webHostEnvironment = webHostEnvironment;
         }
         public async Task<ViewResult> GetAllBooks()
         {
@@ -52,6 +59,13 @@ namespace dotnet_mvc_web.Controllers
         [HttpPost]
         public async Task<IActionResult> AddNewBook(BookModel bookModel)
         {
+            if(bookModel.CoverPhoto != null)
+            {
+                string folder = "books/covers/";
+                folder += bookModel.CoverPhoto.FileName;
+                string serverFolder = Path.Combine(_webHostEnvironment.WebRootPath, folder);
+                await bookModel.CoverPhoto.CopyToAsync(new FileStream(serverFolder, FileMode.Create));
+            }
             if (ModelState.IsValid)
             {
                 int id = await _bookRepository.AddNewBook(bookModel);

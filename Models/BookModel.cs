@@ -4,13 +4,14 @@ using System.ComponentModel.DataAnnotations;
 using dotnet_mvc_web.Data;
 using dotnet_mvc_web.Enums;
 using dotnet_mvc_web.Helpers;
+using Microsoft.AspNetCore.Http;
 
 namespace dotnet_mvc_web.Models
 {
     public class BookModel
     {
         public int Id { get; set; }
-        // [StringLength(100, MinimumLength=5)]
+        [StringLength(100, MinimumLength=5)]
         [Required(ErrorMessage = "Please enter the book's title")]
         // [MyCustomValidationAttribute("cress")]
         // [MyCustomValidationAttribute(ErrorMessage = "This is custom Error Message for custom Validation", Text = "cress")]
@@ -27,5 +28,9 @@ namespace dotnet_mvc_web.Models
         [Required(ErrorMessage = "Please enter the book's total pages")]
         [Display(Name="Total Pages of Book")]
         public int? TotalPages { get; set; }
+
+        [Display(Name ="Choose cover photo of book")]
+        [Required(ErrorMessage = "Please choose the cover picture")]
+        public IFormFile CoverPhoto { get; set; }
     }
 }
