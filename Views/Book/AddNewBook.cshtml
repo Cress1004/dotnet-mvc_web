@@ -53,6 +53,14 @@
         <small><span asp-validation-for="CoverPhoto" class="text-danger"></span></small>
     </div>
     <div class="form-group">
+        <label asp-for="GalleryFiles"></label>
+        <div class="custom-file">
+            <input asp-for="GalleryFiles" class="custom-file-input" id="customFile">
+            <label class="custom-file-label" for="customFile">Choose file</label>
+        </div>
+        <small><span asp-validation-for="GalleryFiles" class="text-danger"></span></small>
+    </div>
+    <div class="form-group">
         <input type="submit" value="Add new book" class="btn btn-primary" />
     </div>
 </form>

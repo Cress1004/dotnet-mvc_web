@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\thanh.nth176871\\source\\repos\\dotnet-mvc_web\\dotnet-mvc_web.csproj": {}
+    "C:\\Users\\thanh.nth176871\\Source\\Repos\\dotnet-mvc_web\\dotnet-mvc_web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\thanh.nth176871\\source\\repos\\dotnet-mvc_web\\dotnet-mvc_web.csproj": {
+    "C:\\Users\\thanh.nth176871\\Source\\Repos\\dotnet-mvc_web\\dotnet-mvc_web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\thanh.nth176871\\source\\repos\\dotnet-mvc_web\\dotnet-mvc_web.csproj",
+        "projectUniqueName": "C:\\Users\\thanh.nth176871\\Source\\Repos\\dotnet-mvc_web\\dotnet-mvc_web.csproj",
         "projectName": "dotnet-mvc_web",
-        "projectPath": "C:\\Users\\thanh.nth176871\\source\\repos\\dotnet-mvc_web\\dotnet-mvc_web.csproj",
+        "projectPath": "C:\\Users\\thanh.nth176871\\Source\\Repos\\dotnet-mvc_web\\dotnet-mvc_web.csproj",
         "packagesPath": "C:\\Users\\thanh.nth176871\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\thanh.nth176871\\source\\repos\\dotnet-mvc_web\\obj\\",
+        "outputPath": "C:\\Users\\thanh.nth176871\\Source\\Repos\\dotnet-mvc_web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"

@@ -1,5 +1,5 @@
 using System;
-
+using System.Collections.Generic;
 namespace dotnet_mvc_web.Data
 {
     public class Books
@@ -11,8 +11,10 @@ namespace dotnet_mvc_web.Data
         public string Category { get; set; }
         public int LanguageId { get; set; }
         public int TotalPages { get; set; }
+        public string CoverImageUrl { get; set; }
         public DateTime? CreateOn { get; set; }
         public DateTime? UpdateOn { get; set; }
         public Language Language { get; set; }
+        public ICollection<BookGallery> BookGallery { get; set; }
     }
 }

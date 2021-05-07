@@ -7,6 +7,8 @@ using dotnet_mvc_web.Repository;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Http;
+
 
 namespace dotnet_mvc_web.Controllers
 {
@@ -62,9 +64,22 @@ namespace dotnet_mvc_web.Controllers
             if(bookModel.CoverPhoto != null)
             {
                 string folder = "books/covers/";
-                folder += bookModel.CoverPhoto.FileName;
-                string serverFolder = Path.Combine(_webHostEnvironment.WebRootPath, folder);
-                await bookModel.CoverPhoto.CopyToAsync(new FileStream(serverFolder, FileMode.Create));
+                bookModel.CoverImageUrl = await UploadImage(folder, bookModel.CoverPhoto);
+            }
+            if(bookModel.GalleryFiles != null)
+            {
+                string folder = "books/gallery/";
+                bookModel.Gallery = new List<GalleryModel>();
+
+                foreach(var file in bookModel.GalleryFiles)
+                {
+                    var gallery = new GalleryModel()
+                    {
+                        Name = file.FileName,
+                        URL = await UploadImage(folder, file),
+                    };
+                    bookModel.Gallery.Add(gallery);
+                }
             }
             if (ModelState.IsValid)
             {
@@ -78,6 +93,14 @@ namespace dotnet_mvc_web.Controllers
             ViewBag.Language = new SelectList(await _languageRepository.GetLanguages(), "Id", "Name");
             
             return View();
+        }
+        private async Task<string> UploadImage(string folderPath, IFormFile file)
+        {
+             
+            folderPath += file.FileName;
+            string serverFolder = Path.Combine(_webHostEnvironment.WebRootPath, folderPath);
+            await file.CopyToAsync(new FileStream(serverFolder, FileMode.Create));
+            return "/" + folderPath;
         }
     }
 }

@@ -17,6 +17,28 @@ namespace dotnet_mvc_web.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 64)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
+            modelBuilder.Entity("dotnet_mvc_web.Data.BookGallery", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("BookId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.Property<string>("URL")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BookId");
+
+                    b.ToTable("BookGallery");
+                });
+
             modelBuilder.Entity("dotnet_mvc_web.Data.Books", b =>
                 {
                     b.Property<int>("Id")
@@ -27,6 +49,9 @@ namespace dotnet_mvc_web.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("Category")
+                        .HasColumnType("text");
+
+                    b.Property<string>("CoverImageUrl")
                         .HasColumnType("text");
 
                     b.Property<DateTime?>("CreateOn")
@@ -71,6 +96,17 @@ namespace dotnet_mvc_web.Migrations
                     b.ToTable("Language");
                 });
 
+            modelBuilder.Entity("dotnet_mvc_web.Data.BookGallery", b =>
+                {
+                    b.HasOne("dotnet_mvc_web.Data.Books", "Book")
+                        .WithMany("BookGallery")
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Book");
+                });
+
             modelBuilder.Entity("dotnet_mvc_web.Data.Books", b =>
                 {
                     b.HasOne("dotnet_mvc_web.Data.Language", "Language")
@@ -80,6 +116,11 @@ namespace dotnet_mvc_web.Migrations
                         .IsRequired();
 
                     b.Navigation("Language");
+                });
+
+            modelBuilder.Entity("dotnet_mvc_web.Data.Books", b =>
+                {
+                    b.Navigation("BookGallery");
                 });
 
             modelBuilder.Entity("dotnet_mvc_web.Data.Language", b =>
