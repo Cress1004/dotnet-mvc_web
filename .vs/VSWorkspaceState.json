@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\Controllers",
-    "\\Models",
     "\\Repository",
     "\\Views",
     "\\Views\\Book",
     "\\Views\\Shared",
     "\\wwwroot",
-    "\\wwwroot\\lib",
-    "\\wwwroot\\lib\\jquery-validation\\dist"
+    "\\wwwroot\\books",
+    "\\wwwroot\\books\\covers",
+    "\\wwwroot\\lib"
   ],
-  "SelectedNode": "\\Views\\Shared\\_Layout.cshtml",
+  "SelectedNode": "\\wwwroot\\books\\covers\\phonepicutres-TA.jpg",
   "PreviewInSolutionExplorer": false
 }

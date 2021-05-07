@@ -27,6 +27,7 @@ namespace dotnet_mvc_web.Repository
                 Title = model.Title,
                 TotalPages = model.TotalPages.HasValue ? model.TotalPages.Value : 0,
                 UpdateOn = DateTime.UtcNow,
+                CoverImageUrl = model.CoverImageUrl,
             };
             await _context.Books.AddAsync(newBook);
             await _context.SaveChangesAsync();
@@ -44,7 +45,8 @@ namespace dotnet_mvc_web.Repository
                       LanguageId = book.LanguageId,
                       Language = book.Language.Name,
                       Title = book.Title,
-                      TotalPages = book.TotalPages
+                      TotalPages = book.TotalPages,
+                      CoverImageUrl = book.CoverImageUrl,
                   }).ToListAsync();
         }
 
@@ -60,6 +62,7 @@ namespace dotnet_mvc_web.Repository
                 Language = book.Language.Name,
                 Title = book.Title,
                 TotalPages = book.TotalPages,
+                CoverImageUrl = book.CoverImageUrl,
             }).FirstOrDefaultAsync();
         }
     }

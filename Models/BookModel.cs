@@ -32,5 +32,6 @@ namespace dotnet_mvc_web.Models
         [Display(Name ="Choose cover photo of book")]
         [Required(ErrorMessage = "Please choose the cover picture")]
         public IFormFile CoverPhoto { get; set; }
+        public string CoverImageUrl { get; set; } 
     }
 }
