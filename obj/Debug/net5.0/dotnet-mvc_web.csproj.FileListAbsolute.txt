@@ -1141,3 +1141,6 @@ C:\Users\thanh.nth176871\source\repos\dotnet-mvc_web\obj\Debug\net5.0\dotnet-mvc
 C:\Users\thanh.nth176871\source\repos\dotnet-mvc_web\obj\Debug\net5.0\ref\dotnet-mvc_web.dll
 C:\Users\thanh.nth176871\source\repos\dotnet-mvc_web\obj\Debug\net5.0\dotnet-mvc_web.pdb
 C:\Users\thanh.nth176871\source\repos\dotnet-mvc_web\obj\Debug\net5.0\dotnet-mvc_web.genruntimeconfig.cache
+C:\Users\thanh.nth176871\Source\Repos\dotnet-mvc_web\obj\Debug\net5.0\Razor\Views\Shared\_header.cshtml.g.cs
+C:\Users\thanh.nth176871\Source\Repos\dotnet-mvc_web\obj\Debug\net5.0\Razor\Views\Shared\_bookThumbnail.cshtml.g.cs
+C:\Users\thanh.nth176871\Source\Repos\dotnet-mvc_web\obj\Debug\net5.0\Razor\Views\Shared\_footer.cshtml.g.cs

@@ -26,48 +26,13 @@
         <p big>Top Books using attribute</p>
         <div class="row">
             <div class="col-md-4">
-                <div class="card mb-4 shadow-sm" style="width: 18rem;">
-                    <img src="~/images/unnamed.jpg" class="card-img-top" alt="unnamed">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <a href="#" class="btn btn-sm btn-outline-secondary">View Details</a>
-                            </div>
-                            <small class="text-muted">Author name</small>
-                        </div>
-                    </div>
-                </div>
-            </div><div class="col-md-4">
-                <div class="card mb-4 shadow-sm" style="width: 18rem;">
-                    <img src="~/images/unnamed.jpg" class="card-img-top" alt="unnamed">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <a href="#" class="btn btn-sm btn-outline-secondary">View Details</a>
-                            </div>
-                            <small class="text-muted">Author name</small>
-                        </div>
-                    </div>
-                </div>
+                <partial name="_bookThumbnail" model= "new BookModel()" />
             </div>
             <div class="col-md-4">
-                <div class="card mb-4 shadow-sm" style="width: 18rem;">
-                    <img src="~/images/unnamed.jpg" class="card-img-top" alt="unnamed">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <a href="#" class="btn btn-sm btn-outline-secondary">View Details</a>
-                            </div>
-                            <small class="text-muted">Author name</small>
-                        </div>
-                    </div>
-                </div>
+                <partial name="_bookThumbnail" model= "new BookModel()" />
+            </div>
+            <div class="col-md-4">
+                <partial name="_bookThumbnail" model= "new BookModel()" />
             </div>
         </div>
     </div>
