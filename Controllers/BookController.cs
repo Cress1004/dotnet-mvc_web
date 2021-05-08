@@ -66,6 +66,7 @@ namespace dotnet_mvc_web.Controllers
                 string folder = "books/covers/";
                 bookModel.CoverImageUrl = await UploadImage(folder, bookModel.CoverPhoto);
             }
+
             if(bookModel.GalleryFiles != null)
             {
                 string folder = "books/gallery/";
@@ -81,6 +82,13 @@ namespace dotnet_mvc_web.Controllers
                     bookModel.Gallery.Add(gallery);
                 }
             }
+
+            if(bookModel.BookPdf != null)
+            {
+                string folder = "books/pdf/";
+                bookModel.BookPdfUrl = await UploadImage(folder, bookModel.BookPdf);
+            }
+
             if (ModelState.IsValid)
             {
                 int id = await _bookRepository.AddNewBook(bookModel);

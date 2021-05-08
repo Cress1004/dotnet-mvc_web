@@ -28,6 +28,7 @@ namespace dotnet_mvc_web.Repository
                 TotalPages = model.TotalPages.HasValue ? model.TotalPages.Value : 0,
                 UpdateOn = DateTime.UtcNow,
                 CoverImageUrl = model.CoverImageUrl,
+                BookPdfUrl = model.BookPdfUrl,
             };
 
             newBook.BookGallery = new List<BookGallery>();
@@ -80,7 +81,8 @@ namespace dotnet_mvc_web.Repository
                    Id = g.Id,
                    Name = g.Name,
                    URL = g.URL,
-                }).ToList()
+                }).ToList(),
+                BookPdfUrl = book.BookPdfUrl,
             }).FirstOrDefaultAsync();
         }
     }

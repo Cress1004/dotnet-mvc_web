@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\Controllers",
-    "\\Repository",
+    "\\Data",
+    "\\Models",
     "\\Views",
-    "\\Views\\Book",
     "\\Views\\Shared",
     "\\wwwroot",
     "\\wwwroot\\books",
-    "\\wwwroot\\books\\covers",
+    "\\wwwroot\\images",
     "\\wwwroot\\lib"
   ],
-  "SelectedNode": "\\wwwroot\\books\\covers\\phonepicutres-TA.jpg",
+  "SelectedNode": "\\Data\\Books.cs",
   "PreviewInSolutionExplorer": false
 }

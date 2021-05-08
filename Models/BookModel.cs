@@ -35,5 +35,7 @@ namespace dotnet_mvc_web.Models
         public string CoverImageUrl { get; set; } 
         public IFormFileCollection GalleryFiles { get; set; }
         public List<GalleryModel> Gallery { get; set; }
+        public IFormFile BookPdf { get; set; }
+        public string BookPdfUrl { get; set; } 
     }
 }
