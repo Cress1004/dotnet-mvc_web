@@ -21,25 +21,21 @@
 </section>
 <div class="py-5 bg-light">
     <div class="container">
-        @* <h3>Top Books</h3> *@
-        <big>Top Books</big>
-        <p big>Top Books using attribute</p>
+         <h3>Top Books</h3> 
+        @await Component.InvokeAsync("TopBooks")
+        @*<vc:top-books></vc:top-books>*@
         <div class="row">
             <div class="col-md-4">
-                @*<partial name="_bookThumbnail" model= "new BookModel()" />*@
-                @Html.Partial("_bookThumbnail", new BookModel())
+                <partial name="_bookThumbnail" model="new BookModel()" />
             </div>
             <div class="col-md-4">
-                @*<partial name="_bookThumbnail" model= "new BookModel()" />*@
-                @await Html.PartialAsync("_bookThumbnail", new BookModel())
+                <partial name="_bookThumbnail" model="new BookModel()" />
             </div>
             <div class="col-md-4">
-                @*<partial name="_bookThumbnail" model= "new BookModel()" />*@
-                @Html.RenderPartial("_bookThumbnail", new BookModel())
+                <partial name="_bookThumbnail" model="new BookModel()" />
             </div>
             <div class="col-md-4">
-                @*<partial name="_bookThumbnail" model= "new BookModel()" />*@
-                @await Html.RenderPartialAsync("_bookThumbnail", new BookModel())
+                <partial name="_bookThumbnail" model="new BookModel()" />
             </div>
         </div>
     </div>
