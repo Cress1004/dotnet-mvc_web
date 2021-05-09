@@ -69,6 +69,13 @@ namespace dotnet_mvc_web
                 // endpoints.MapControllerRoute(
                 //     name: "default",
                 //     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                // add new route
+                endpoints.MapControllerRoute(
+                        name: "default",
+                        pattern: "about-us/{id}",
+                        defaults: new { controller = "Home", action = "AboutUs" }
+                   );
             });
         }
     }
