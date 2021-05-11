@@ -6,6 +6,8 @@
     var book = ViewData["Book"] as BookModel;
 }
 
+@inject dotnet_mvc_web.Repository.IBookRepository _bookRepository
+
 <section class="jumbotron text-center">
     <div class="container">
         <img src="~/images/logo.png" class="logo" alt="logo">
@@ -19,6 +21,10 @@
         </p>
     </div>
 </section>
+@foreach(var item in await _bookRepository.GetAllBooks())
+{
+    <h2>@item.Title</h2>
+}
 <div class="py-5 bg-light">
     <div class="container">
         <h3>Top Books</h3>

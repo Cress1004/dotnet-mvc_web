@@ -14,12 +14,12 @@ namespace dotnet_mvc_web.Controllers
 {
     public class BookController : Controller
     {
-        private readonly BookRepository _bookRepository = null;
-        private readonly LanguageRepository _languageRepository = null;
+        private readonly IBookRepository _bookRepository = null;
+        private readonly ILanguageRepository _languageRepository = null;
         private readonly IWebHostEnvironment _webHostEnvironment;
         public BookController(
-            BookRepository bookRepository, 
-            LanguageRepository languageRepository,
+            IBookRepository bookRepository, 
+            ILanguageRepository languageRepository,
             IWebHostEnvironment webHostEnvironment
          ) {
             _bookRepository = bookRepository;
@@ -54,7 +54,6 @@ namespace dotnet_mvc_web.Controllers
 
         public async Task<ViewResult> AddNewBookAsync(bool isSuccess = false, int bookId = 0)
         {
-            ViewBag.Language = new SelectList(await _languageRepository.GetLanguages(), "Id", "Name");
             ViewBag.IsSuccess = isSuccess;
             ViewBag.BookId = bookId;
             return View();
@@ -99,8 +98,6 @@ namespace dotnet_mvc_web.Controllers
                     return RedirectToAction(nameof(AddNewBook), new { isSuccess = true, bookId = id });
                 }
             }
-
-            ViewBag.Language = new SelectList(await _languageRepository.GetLanguages(), "Id", "Name");
             
             return View();
         }

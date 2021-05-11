@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace dotnet_mvc_web.Repository
 {
-    public class LanguageRepository
+    public class LanguageRepository : ILanguageRepository
     {
         private readonly BookStoreContext _context = null;
         public LanguageRepository(BookStoreContext context)

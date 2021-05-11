@@ -39,8 +39,8 @@ namespace dotnet_mvc_web
             // .AddViewOptions(options => {
             //     options.HtmlHelperOptions.ClientValidationEnabled = false;
             // } );
-            services.AddScoped<BookRepository, BookRepository>();
-            services.AddScoped<LanguageRepository, LanguageRepository>();
+            services.AddScoped<IBookRepository, BookRepository>();
+            services.AddScoped<ILanguageRepository, LanguageRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

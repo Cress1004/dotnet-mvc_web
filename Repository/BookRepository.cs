@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace dotnet_mvc_web.Repository
 {
-    public class BookRepository
+    public class BookRepository : IBookRepository
     {
         private readonly BookStoreContext _context = null;
 
@@ -101,6 +101,11 @@ namespace dotnet_mvc_web.Repository
                 TotalPages = book.TotalPages,
                 CoverImageUrl = book.CoverImageUrl,
             }).Take(count).ToListAsync();
+        }
+
+        public string GetAppName()
+        {
+            return "Book Store App";
         }
     }
 }
