@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Repository",
+    "\\Component",
+    "\\Controllers",
+    "\\Data",
     "\\Views",
-    "\\Views\\Book",
     "\\Views\\Home",
     "\\Views\\Shared",
-    "\\wwwroot",
-    "\\wwwroot\\books",
-    "\\wwwroot\\images",
+    "\\Views\\Shared\\Components",
+    "\\Views\\Shared\\Components\\TopBooks",
     "\\wwwroot\\lib"
   ],
-  "SelectedNode": "\\Models\\BookModel.cs",
+  "SelectedNode": "\\Startup.cs",
   "PreviewInSolutionExplorer": false
 }

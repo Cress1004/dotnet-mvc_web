@@ -26,6 +26,8 @@ namespace dotnet_mvc_web.Controllers
             _languageRepository = languageRepository;
             _webHostEnvironment = webHostEnvironment;
         }
+
+        [Route("all-books")]
         public async Task<ViewResult> GetAllBooks()
         {
             var data = await _bookRepository.GetAllBooks();
@@ -34,7 +36,7 @@ namespace dotnet_mvc_web.Controllers
         }
 
 
-        [Route("book-details/{id}", Name = "bookDetailsRoute")]
+        [Route("book-details/{id:int:min(1)}", Name = "bookDetailsRoute")]
         public async Task<ViewResult> GetBook(int id)
         {
             var data = await _bookRepository.GetBookById(id);
